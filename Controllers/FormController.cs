@@ -17,12 +17,12 @@ namespace International_Address_Form.Controllers
 
         public IEnumerable<Form> GetAllProducts()
         {
-            return forms;
+            return TestForms;
         }
 
         public IHttpActionResult GetForm(int id)
         {
-            var form = forms.FirstOrDefault((f) => f.Id == id);
+            var form = TestForms.FirstOrDefault((f) => f.Id == id);
             if (form == null)
             {
                 return NotFound();
