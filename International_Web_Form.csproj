@@ -82,6 +82,7 @@
     <Folder Include="Scripts\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="HtmlPage1.html" />
     <Content Include="TextFile1.txt" />
     <Content Include="Views\Web.config" />
     <Content Include="Global.asax" />
