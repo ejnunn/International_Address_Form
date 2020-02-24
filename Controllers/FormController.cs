@@ -15,9 +15,9 @@ namespace International_Web_Form.Controllers
             IEnumerable<International_Address_Form.Models.Form> forms = null;
             using (var client = new System.Net.Http.HttpClient())
             {
-                client.BaseAddress = new Uri("http://localhost:57215/api/forms");
+                client.BaseAddress = new Uri("http://localhost:57215/api/");
                 //HTTP GET
-                var responseTask = client.GetAsync("forms");
+                var responseTask = client.GetAsync("addresses");
                 responseTask.Wait();
 
                 var result = responseTask.Result;
