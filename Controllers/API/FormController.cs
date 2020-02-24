@@ -13,6 +13,7 @@ namespace International_Address_Form.Controllers
     {
         [System.Web.Http.Route("~/api/forms")]
         [System.Web.Http.HttpGet]
+        [ProducesResponseType(typeof(IList<Form>),200)]
         public IHttpActionResult GetAllForms()
         {
             IList<Form> forms = null;
