@@ -1,40 +1,39 @@
-﻿using International_Address_Form.Models;
-using Microsoft.AspNetCore.Mvc;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net;
-using System.Web.Http;
+using System.Net.Http;
+using System.Web;
+using System.Web.Mvc;
 
-namespace International_Address_Form.Controllers
+namespace International_Web_Form.Controllers
 {
-    public class FormController : ApiController
+    public class FormController : Controller
     {
-        Form[] TestForms = new Form[]
+        // GET: Form
+        public ActionResult Index()
         {
-            new Form {Id = 001, AddressLine0 = "901 12th Ave", Country = "United States", Region = "Washington", Locale = "Seattle", Code = 98122}, 
-            new Form {Id = 002, AddressLine0 = "1200 E Pike st.", AddressLine1 = "Apt. 407", Country = "United States", Region = "Washington", Locale = "Seattle", Code = 98122}
-        };
-
-        [System.Web.Http.Route("~/Forms")]
-        [System.Web.Http.HttpGet]
-        [ProducesResponseType(typeof(IEnumerable<Form>),200)]
-        public IEnumerable<Form> GetAllForms()
-        {
-            return TestForms;
-        }
-
-        [System.Web.Http.Route("~/Forms/{id:long}")]
-        [System.Web.Http.HttpGet]
-        [ProducesResponseType(typeof(Form), 200)]
-        public IHttpActionResult GetForm(long id)
-        {
-            var form = TestForms.FirstOrDefault((f) => f.Id == id);
-            if (form == null)
+            IEnumerable<International_Address_Form.Models.Form> forms = null;
+            using (var client = new System.Net.Http.HttpClient())
             {
-                return NotFound();
+                client.BaseAddress = new Uri("http://localhost:57215/api/forms");
+                //HTTP GET
+                var responseTask = client.GetAsync("forms");
+                responseTask.Wait();
+
+                var result = responseTask.Result;
+                if (result.IsSuccessStatusCode)
+                {
+                    var readTask = result.Content.ReadAsAsync<IList<International_Address_Form.Models.Form>>();
+                    readTask.Wait();
+                    forms = readTask.Result;
+                }
+                else
+                {
+                    forms = Enumerable.Empty<International_Address_Form.Models.Form>();
+                    ModelState.AddModelError(string.Empty, "Server Error.");
+                }
             }
-            return Ok(form);
+            return View(forms);
         }
     }
 }
