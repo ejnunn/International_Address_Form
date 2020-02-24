@@ -14,7 +14,7 @@ namespace International_Address_Form.Controllers
         [System.Web.Http.Route("~/api/forms")]
         [System.Web.Http.HttpGet]
         [ProducesResponseType(typeof(IList<Form>),200)]
-        public IHttpActionResult GetAllForms()
+        public IHttpActionResult GetAllAddresses()
         {
             IList<Form> forms = null;
             using (var ctx = new WebFormEntity())
@@ -41,7 +41,7 @@ namespace International_Address_Form.Controllers
         [System.Web.Http.Route("~/api/forms/{id:long}")]
         [System.Web.Http.HttpGet]
         [ProducesResponseType(typeof(Form), 200)]
-        public IHttpActionResult GetForm(long id)
+        public IHttpActionResult GetAddress(long id)
         {
             Form form = null;
 
