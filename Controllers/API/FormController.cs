@@ -11,7 +11,7 @@ namespace International_Address_Form.Controllers
 {
     public class FormController : ApiController
     {
-        [System.Web.Http.Route("~/api/forms")]
+        [System.Web.Http.Route("~/api/addresses")]
         [System.Web.Http.HttpGet]
         [ProducesResponseType(typeof(IList<Form>),200)]
         public IHttpActionResult GetAllAddresses()
@@ -38,7 +38,7 @@ namespace International_Address_Form.Controllers
             }
             return Ok(forms);
         }
-        [System.Web.Http.Route("~/api/forms/{id:long}")]
+        [System.Web.Http.Route("~/api/address/{id:long}")]
         [System.Web.Http.HttpGet]
         [ProducesResponseType(typeof(Form), 200)]
         public IHttpActionResult GetAddress(long id)
