@@ -5,7 +5,7 @@ namespace International_Address_Form.Models
 
     public class Form
     {
-        public int Id { get; set; }
+        public long Id { get; set; }
         public string AddressLine0 { get; set; }
         public string AddressLine1 { get; set; }
         public string AddressLine2 { get; set; }
