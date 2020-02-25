@@ -263,10 +263,10 @@
     <Content Include="Views\Form\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\ContentTypes.cs" />
-    <Compile Include="Models\DocumentRelationship.cs" />
-    <Compile Include="Models\Method.cs" />
-    <Compile Include="Models\DocumentLink.cs" />
+    <Compile Include="Models\ApiModels\ContentTypes.cs" />
+    <Compile Include="Models\ApiModels\DocumentRelationship.cs" />
+    <Compile Include="Models\ApiModels\Method.cs" />
+    <Compile Include="Models\ApiModels\DocumentLink.cs" />
     <Compile Include="Controllers\API\FormController.cs" />
     <Compile Include="Controllers\API\RootController.cs" />
     <Compile Include="Controllers\FormController.cs" />
@@ -282,7 +282,7 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Models\ApplicationRelationship.cs" />
+    <Compile Include="Models\ApiModels\ApplicationRelationship.cs" />
     <Compile Include="Models\Country.cs" />
     <Compile Include="Models\Form.cs" />
     <Compile Include="Models\Model1.Context.cs">
