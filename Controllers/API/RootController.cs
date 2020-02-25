@@ -39,12 +39,6 @@ namespace International_Web_Form.Controllers.API
                     }
                 },
                 {
-                    //
-                    // and, we need to bump the timesheet version, we can argue whether
-                    // this is considered a breaking change or not. i'm saying it's not
-                    // in this case because all of our existing clients will continue
-                    // to work without fail
-                    //
                     Models.ApplicationRelationship.Version, "0.1"
                 }
             };
