@@ -263,7 +263,12 @@
     <Content Include="Views\Form\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\ContentTypes.cs" />
+    <Compile Include="Models\DocumentRelationship.cs" />
+    <Compile Include="Models\Method.cs" />
+    <Compile Include="Models\DocumentLink.cs" />
     <Compile Include="Controllers\API\FormController.cs" />
+    <Compile Include="Controllers\API\RootController.cs" />
     <Compile Include="Controllers\FormController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

@@ -8,6 +8,7 @@ namespace International_Web_Form.Models
     public enum ApplicationRelationship
     {
         Addresses,
-        Address
+        Address,
+        Version
     }
 }
