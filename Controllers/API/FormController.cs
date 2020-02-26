@@ -1,5 +1,4 @@
-﻿using International_Address_Form.Models;
-using International_Web_Form.Models;
+﻿using International_Web_Form.Models;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -7,7 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web.Http;
 
-namespace International_Address_Form.Controllers
+namespace International_Web_Form.Controllers.API
 {
     public class FormController : ApiController
     {

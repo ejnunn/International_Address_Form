@@ -26,5 +26,7 @@ namespace International_Web_Form.Models
         }
     
         public virtual DbSet<TestAddress> TestAddresses { get; set; }
+
+        public System.Data.Entity.DbSet<International_Web_Form.Models.Form> Forms { get; set; }
     }
 }

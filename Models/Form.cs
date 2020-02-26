@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace International_Address_Form.Models
+namespace International_Web_Form.Models
 {
 
     public class Form
