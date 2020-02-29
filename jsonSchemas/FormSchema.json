@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema",
+
+  "definitions": {
+    "Address": {
+      "$id":  "#address",
+      "type": "object",
+      "properties": {
+        "AddressLine1": {
+          "type": "string",
+          "description": "Example: Primary House and Street Name."
+        },
+        "AddressLine2": {
+          "type": "string",
+          "description": "Example: Apartment Number."
+        },
+        "AddressLine3": {
+          "type": "string",
+          "description": "Example: Extra Information."
+        },
+        "Country": {
+          "type": "string",
+          "description": "Full Name."
+        },
+        "Region": {
+          "type": "string",
+          "description": "State/Province/Region."
+        },
+        "Locale": {
+          "type": "string",
+          "description": "City/Town/Village."
+        },
+        "Code": {
+          "type": "integer",
+          "description": "Zip/Postal."
+        }
+      }
+    }
+  }
+}
