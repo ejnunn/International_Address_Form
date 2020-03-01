@@ -51,28 +51,26 @@
           "type": "string",
           "description": "Example: Apartment Number."
         },
-        "AddressLine3": {
-          "type": "Array",
-          "description": "Example: Extra Information."
-        },
         "Country": {
           "type": "string",
           "description": "Full Name."
         },
-        "Region": {
-          "type": "string",
-          "description": "State/Province/Region."
-        },
         "Locale": {
-          "type": "string",
-          "description": "City/Town/Village."
-        },
-        "Code": {
-          "type": "integer",
-          "description": "Zip/Postal."
+            "type": "string",
+            "description": "Postal code + city/town/locality.",
+            "Code": {
+              "type": "string",
+              "description": "One letter + four digits + three letters.",
+              "pattern": "^[A-z]\d{4}[A-z]{3}$"
+            },
+            "Locale": {
+              "type": "string",
+              "description": "City/town/locality"
+            }
+          }
         }
       },
-      "Required": [ "AddressLine1","AddressLine2","city", "state" ]
+      "Required": [ "AddressLine1","AddressLine2","Locale", "Country" ]
     },
     {
       "code": "AM",
