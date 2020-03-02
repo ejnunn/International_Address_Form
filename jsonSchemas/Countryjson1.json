@@ -4,31 +4,31 @@
     "address1": {
       "display": "House",
       "columnName": "address1",
-      "pattern": "^[\\s]$"
+      "pattern": "^([A-Z][a-z]{3,10} [A-Z][a-z]{3,10}|[A-Z][a-z]{3,10}|[1-9]{1,3}-[A-Z])$"
     },
     "address2": {
       "display": "Street/Road",
       "columnName": "address2",
-      "pattern": "^[\\s]$"
+      "pattern": "^([A-Z][a-z]{3,10} [A-Z][a-z]{3,5}|[1-9]{2,5})$"
     },
     "address3": {
       "display": "Sector",
       "columnName": "address3",
-      "pattern": "^[\\s]$"
+      "pattern": "^[A-Z]-[1-9]/[1-9]$"
     },
     "region": {
       "display": "",
-      "columnName": "",
+      "columnName": "region",
       "pattern": ""
     },
     "locale": {
       "display": "City - Code",
       "columnName": "locale",
-      "pattern": "^([A-z]+-[0-9]+|[A-z]+)$"
+      "pattern": "^[A-Z][a-z]{3,10}-[1-9]{6}$"
     },
     "postalCode": {
       "display": "",
-      "columnName": "",
+      "columnName": "code",
       "pattern": ""
     },
     "required": [ "address1", "address2", "address3", "locale", "name" ]
@@ -36,36 +36,138 @@
   "NG": {
     "name": "Nigeria",
     "address1": {
-      "display": "House",
+      "display": "Address 1",
       "columnName": "address1",
-      "pattern": "^[\\s]$"
+      "pattern": "^([A-Z][a-z]{3,10} [A-Z][a-z]{3,10}|[A-Z][a-z]{3,10}|P[.]M[.]B[.] [1-9]{5}|P[.]O[.] Box [1-9]{3})$"
     },
     "address2": {
-      "display": "Street/Road",
+      "display": "Address 2",
       "columnName": "address2",
-      "pattern": "^[\\s]$"
+      "pattern": "^([]|[A-Z][a-z]{3,10})$"
     },
     "address3": {
-      "display": "Sector",
+      "display": "",
       "columnName": "address3",
-      "pattern": "^[\\s]$"
+      "pattern": ""
     },
     "region": {
       "display": "",
-      "columnName": "",
+      "columnName": "region",
       "pattern": ""
     },
     "locale": {
       "display": "City - Code",
       "columnName": "locale",
-      "pattern": "^([A-z]+-[0-9]+|[A-z]+)$"
+      "pattern": "^[A-Z][a-z]{3,10}-[1-9]{6}$"
     },
     "postalCode": {
       "display": "",
-      "columnName": "",
+      "columnName": "code",
       "pattern": ""
     },
-    "required": [ "address1", "address2", "address3", "locale", "name" ]
+    "required": [ "address1", "locale" ]
+  },
+  "BD": {
+    "name": "Bangladesh",
+    "address1": {
+      "display": "Building",
+      "columnName": "address1",
+      "pattern": "^([A-Z][a-z]{3,10} [A-Z][a-z]{3,10}|[A-Z][a-z]{3,10}|[A-Z][a-z]{3,10}-[1-9]{3}|P[.]O[.] Box [1-9]{3})$"
+    },
+    "address2": {
+      "display": "Street/Road",
+      "columnName": "address2",
+      "pattern": "^([1-9]{1,3} [A-Z][a-z]{3,10} [A-Z][a-z]{3,10}|[A-Z][a-z]{3,10} [A-Z][a-z]{3,10}|[A-Z][a-z]{3,10}-[1-9]{3})$"
+    },
+    "address3": {
+      "display": "",
+      "columnName": "address3",
+      "pattern": ""
+    },
+    "region": {
+      "display": "",
+      "columnName": "region",
+      "pattern": ""
+    },
+    "locale": {
+      "display": "City - Code",
+      "columnName": "locale",
+      "pattern": "^[A-Z][a-z]{3,10}-[1-9]{4}$"
+    },
+    "postalCode": {
+      "display": "",
+      "columnName": "code",
+      "pattern": ""
+    },
+    "required": [ "address1", "address2", "locale" ]
+  },
+  "RU": {
+    "name": "Russian Federation",
+    "address1": {
+      "display": "Street/Building/Apartment",
+      "columnName": "address1",
+      "pattern": "^(ul[.] [A-Z][a-z]{3,10} d[.] [1-9]{1,3}, kv[.] [1-9]{2,3}|ul[.] [A-Z][a-z]{3,10} d[.] [1-9]{1,3})$"
+    },
+    "address2": {
+      "display": "Raion",
+      "columnName": "address2",
+      "pattern": "^[A-Z][a-z]{3,10} r-n$"
+    },
+    "address3": {
+      "display": "",
+      "columnName": "address3",
+      "pattern": ""
+    },
+    "region": {
+      "display": "Oblast",
+      "columnName": "region",
+      "pattern": "^[A-Z][a-z]{3,10} obl$"
+    },
+    "locale": {
+      "display": "City/Town/Village",
+      "columnName": "locale",
+      "pattern": "^(g[.] [A-Z][a-z]{3,10}|pos[.] [A-Z][a-z]{3,10}|der[.] [A-Z][a-z]{3,10})$"
+    },
+    "postalCode": {
+      "display": "Postal Code",
+      "columnName": "code",
+      "pattern": "^[1-9]{6}$"
+    },
+    "required": [ "address1", "locale", "postalCode" ]
+  },
+  "MX": {
+    "name": "Mexico",
+    "address1": {
+      "display": "Street/Building/Apartment",
+      "columnName": "address1",
+      "pattern": "^([A-Z][a-z]{3,10} [1-9]{1,3}|[A-Z][a-z]{3,10} [1-9]{1,3} - [1-9]{1,3}|[A-Z][a-z]{3,10} #[1-9]{1,3})$"
+    },
+    "address2": {
+      "display": "Code/Locality/Province",
+      "columnName": "address2",
+      "pattern": "^[1-9]{5} [A-Z][a-z]{3,10}, [A-Z]{3}$"
+    },
+    "address3": {
+      "display": "",
+      "columnName": "address3",
+      "pattern": ""
+    },
+    "region": {
+      "display": "",
+      "columnName": "region",
+      "pattern": ""
+    },
+    "locale": {
+      "display": "Village",
+      "columnName": "locale",
+      "pattern": "^([A-Z][a-z]{3,10} [A-Z][a-z]{3,10}|[A-Z][a-z]{3,10})$"
+    },
+    "postalCode": {
+      "display": "Postal Code",
+      "columnName": "code",
+      "pattern": ""
+    },
+    "required": [ "address1", "address2" ]
   }
 }
 
