@@ -1,0 +1,36 @@
+﻿{
+  "US": {
+    "name": "United States",
+    "address1": {
+      "display": "Address 1",
+      "columnName": "address1",
+      "pattern": "^\\d+\\s[A-z0-9]+\\s[A-z]+\\s*[A-z]*$"
+    },
+    "address2": {
+      "display": "Address 2",
+      "columnName": "address1",
+      "pattern": "^[A-z]+\\s[A-z0-9\\-]+[\\s[0-9]+]*$"
+    },
+    "address3": {
+      "display": "State",
+      "columnName": "region",
+      "pattern": "^[A-z]+$"
+    },
+    "region": {
+      "display": "State",
+      "columnName": "region",
+      "pattern": "^[A-z]+$"
+    },
+    "locale": {
+      "display": "",
+      "columnName": "",
+      "pattern": ""
+    },
+    "postalCode": {
+      "display": "",
+      "columnName": "",
+      "pattern": ""
+    },
+    "required": [ "address1", "region", "locale", "postalCode" ]
+  }
+}

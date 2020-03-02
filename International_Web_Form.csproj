@@ -261,6 +261,7 @@
     <Content Include="Default.aspx" />
     <Content Include="packages.config" />
     <Content Include="Views\Form\Index.cshtml" />
+    <None Include="jsonSchemas\CountrySchema.json" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\ApiModels\ContentTypes.cs" />
