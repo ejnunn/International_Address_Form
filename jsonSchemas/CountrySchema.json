@@ -299,13 +299,9 @@
       "pattern": "^[A-z]+$"
     },
     "postalCode": {
-      "display": "“Postal",
-      "Code\",": null,
+      "display": "“Postal Code",
       "columnName": "code",
-      "pattern": "“",
-      [ 0, -9 ],
-      { 10 },
-      "”"
+      "pattern": "[0-9]{10}"
     },
     "required": [ "address1", "region", "locale", "postalCode" ]
   },
@@ -343,6 +339,7 @@
     },
     "required": [ "address1", "address2", "region", "locale", "postalCode" ]
   },
+
   "KR": {
     "name": "Korea, Republic of",
     "address1": {
@@ -375,7 +372,7 @@
       "columnName": "code",
       "pattern": "[0-9]{5}"
     },
-    "required": [ "address1", "address2", "region\", \"locale\", \"postalCode\" ]"
+    "required": [ "address1", "address2", "region", "locale", "postalCode" ]
   },
   "PH": {
     "name": "Philippines",
