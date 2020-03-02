@@ -1,4 +1,140 @@
 ﻿{
+  "BR": {
+    "name": "Brazil",
+    "address1": {
+      "display": "Address 1",
+      "columnName": "address1",
+      "pattern": "^(\\w*\\s*[\\#\\-\\,\\/\\.\\(\\)\\&]*)+$"
+    },
+    "address2": {
+      "display": "Address 2",
+      "columnName": "address2",
+      "pattern": "^(\\w*\\s*[\\#\\-\\,\\/\\.\\(\\)\\&]*)+$"
+    },
+    "address3": {
+      "display": "Address 3",
+      "columnName": "address3",
+      "pattern": "^(\\w*\\s*[\\#\\-\\,\\/\\.\\(\\)\\&]*)+$"
+    },
+    "region": {
+      "display": "Province",
+      "columnName": "region",
+      "pattern": "^(\\w*\\s*[\\#\\-\\,\\/\\.\\(\\)\\&]*)+$"
+    },
+    "locale": {
+      "display": "City",
+      "columnName": "locale",
+      "pattern": "^(\\w*\\s*[\\#\\-\\,\\/\\.\\(\\)\\&]*)+$"
+    },
+    "postalCode": {
+      "display": "Postal Code",
+      "columnName": "postalCode",
+      "pattern": "^\\d{5}\\-\\d{3}$"
+    },
+    "required": [ "address1", "region", "locale", "postalCode" ]
+  },
+  "CN": {
+    "name": "China",
+    "address1": {
+      "display": "Address 1",
+      "columnName": "address1",
+      "pattern": "^\\d+\\s[A-z]+\\s[A-z]+$"
+    },
+    "address2": {
+      "display": "Address 2",
+      "columnName": "address2",
+      "pattern": "^[A-z0-9]+\\s*[A-z0-9]*$"
+    },
+    "address3": {
+      "display": "District",
+      "columnName": "address3",
+      "pattern": "^[A-z]+$"
+    },
+    "region": {
+      "display": "Province",
+      "columnName": "region",
+      "pattern": "^[A-z]+$"
+    },
+    "locale": {
+      "display": "City",
+      "columnName": "locale",
+      "pattern": "^[A-z]+$"
+    },
+    "postalCode": {
+      "display": "Postal Code",
+      "columnName": "postalCode",
+      "pattern": "^[0-9]{6}$"
+    },
+    "required": [ "address1", "region", "locale", "postalCode" ]
+  },
+  "ID": {
+    "name": "Indonesia",
+    "address1": {
+      "display": "Address 1",
+      "columnName": "address1",
+      "pattern": "^(\\w*\\s*[\\#\\-\\,\\/\\.\\(\\)\\&]*)+$"
+    },
+    "address2": {
+      "display": "Address 2",
+      "columnName": "address2",
+      "pattern": "^(\\w*\\s*[\\#\\-\\,\\/\\.\\(\\)\\&]*)+$"
+    },
+    "address3": {
+      "display": "Address 3",
+      "columnName": "address3",
+      "pattern": "^(\\w*\\s*[\\#\\-\\,\\/\\.\\(\\)\\&]*)+$"
+    },
+    "region": {
+      "display": "Province",
+      "columnName": "region",
+      "pattern": "^(\\w*\\s*[\\#\\-\\,\\/\\.\\(\\)\\&]*)+$"
+    },
+    "locale": {
+      "display": "City",
+      "columnName": "locale",
+      "pattern": "^(\\w*\\s*[\\#\\-\\,\\/\\.\\(\\)\\&]*)+$"
+    },
+    "postalCode": {
+      "display": "Postal Code",
+      "columnName": "postalCode",
+      "pattern": "^\d{5}$"
+    },
+    "required": [ "address1", "region", "locale", "postalCode" ]
+  },
+  "IN": {
+    "name": "India",
+    "address1": {
+      "display": "Address 1",
+      "columnName": "address1",
+      "pattern": "^(\\w*\\s*[\\#\\-\\,\\/\\.\\(\\)\\&]*)+$"
+    },
+    "address2": {
+      "display": "Address 2",
+      "columnName": "address2",
+      "pattern": "^(\\w*\\s*[\\#\\-\\,\\/\\.\\(\\)\\&]*)+$"
+    },
+    "address3": {
+      "display": "Address 3",
+      "columnName": "address3",
+      "pattern": "^(\\w*\\s*[\\#\\-\\,\\/\\.\\(\\)\\&]*)+$"
+    },
+    "region": {
+      "display": "State",
+      "columnName": "region",
+      "pattern": "^[A-z]+$"
+    },
+    "locale": {
+      "display": "City",
+      "columnName": "locale",
+      "pattern": "^[A-z]+$"
+    },
+    "postalCode": {
+      "display": "Postal Code",
+      "columnName": "postalCode",
+      "pattern": "[0-9]{6}"
+    },
+    "required": [ "address1", "region", "locale", "postalCode" ]
+  },
   "US": {
     "name": "United States",
     "address1": {
@@ -8,13 +144,13 @@
     },
     "address2": {
       "display": "Address 2",
-      "columnName": "address1",
+      "columnName": "address2",
       "pattern": "^[A-z]+\\s[A-z0-9\\-]+[\\s[0-9]+]*$"
     },
     "address3": {
-      "display": "State",
-      "columnName": "region",
-      "pattern": "^[A-z]+$"
+      "display": "Address 3",
+      "columnName": "address3",
+      "pattern": "^$" // empty string
     },
     "region": {
       "display": "State",
@@ -22,14 +158,14 @@
       "pattern": "^[A-z]+$"
     },
     "locale": {
-      "display": "",
-      "columnName": "",
-      "pattern": ""
+      "display": "City",
+      "columnName": "locale",
+      "pattern": "^[A-z]+$"
     },
     "postalCode": {
-      "display": "",
-      "columnName": "",
-      "pattern": ""
+      "display": "Zip Code",
+      "columnName": "postalCode",
+      "pattern": "^\\d{5}$"
     },
     "required": [ "address1", "region", "locale", "postalCode" ]
   }
