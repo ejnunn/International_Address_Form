@@ -43,11 +43,11 @@
     "Country": {
       "Country": "Argentina",
       "AddressForm": {
-        "AddressLine1": {
+        "address1": {
           "type": "string",
           "description": "Example: Primary House and Street Name."
         },
-        "AddressLine2": {
+        "Address2": {
           "type": "string",
           "description": "Example: Apartment Number."
         },

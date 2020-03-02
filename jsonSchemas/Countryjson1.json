@@ -1,0 +1,71 @@
+{
+  "PK": {
+    "name": "Pakistan",
+    "address1": {
+      "display": "House",
+      "columnName": "address1",
+      "pattern": "^[\\s]$"
+    },
+    "address2": {
+      "display": "Street/Road",
+      "columnName": "address2",
+      "pattern": "^[\\s]$"
+    },
+    "address3": {
+      "display": "Sector",
+      "columnName": "address3",
+      "pattern": "^[\\s]$"
+    },
+    "region": {
+      "display": "",
+      "columnName": "",
+      "pattern": ""
+    },
+    "locale": {
+      "display": "City - Code",
+      "columnName": "locale",
+      "pattern": "^([A-z]+-[0-9]+|[A-z]+)$"
+    },
+    "postalCode": {
+      "display": "",
+      "columnName": "",
+      "pattern": ""
+    },
+    "required": [ "address1", "address2", "address3", "locale", "name" ]
+  },
+  "NG": {
+    "name": "Nigeria",
+    "address1": {
+      "display": "House",
+      "columnName": "address1",
+      "pattern": "^[\\s]$"
+    },
+    "address2": {
+      "display": "Street/Road",
+      "columnName": "address2",
+      "pattern": "^[\\s]$"
+    },
+    "address3": {
+      "display": "Sector",
+      "columnName": "address3",
+      "pattern": "^[\\s]$"
+    },
+    "region": {
+      "display": "",
+      "columnName": "",
+      "pattern": ""
+    },
+    "locale": {
+      "display": "City - Code",
+      "columnName": "locale",
+      "pattern": "^([A-z]+-[0-9]+|[A-z]+)$"
+    },
+    "postalCode": {
+      "display": "",
+      "columnName": "",
+      "pattern": ""
+    },
+    "required": [ "address1", "address2", "address3", "locale", "name" ]
+  }
+}
+

@@ -231,6 +231,7 @@
     </Content>
     <Content Include="jsonSchemas\FormSchema.json" />
     <Content Include="jsonSchemas\json-schema.json" />
+    <Content Include="jsonSchemas\Countryjson1.json" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Models\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
